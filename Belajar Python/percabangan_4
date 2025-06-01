@@ -1,0 +1,29 @@
+def hitung_harga_tiket(umur):
+    harga_tiket_anak = 10.000
+    harga_tiket_remaja = 15.000
+    harga_tiket_dewasa = 25.000
+    harga_tiket_lansia = 0
+
+    if umur <= 12:
+        return f"Harga tiket untukmu = {harga_tiket_anak:.3f}"
+    elif umur <= 17:
+        return f"Harga tiket untukmu = {harga_tiket_remaja:.3f}"
+    elif umur <= 59:
+        return f"Harga tiket untukmu = {harga_tiket_dewasa:.3f}"
+    else:
+        return f"Harga tiket untukmu = {harga_tiket_lansia:.3f}. Yap betul, untuk lansia GRATIS!!"
+
+
+    
+harga_tiket1 = hitung_harga_tiket(int(input("Masukan umur anda : ")))
+print(harga_tiket1)
+harga_tiket2 = hitung_harga_tiket(int(input("Masukan umur anda : ")))
+print(harga_tiket2)
+harga_tiket3 = hitung_harga_tiket(int(input("Masukan umur anda : ")))
+print(harga_tiket3)
+
+def ekstrak_harga(tiket):
+    return float(tiket.split('=')[1].split()[0].replace('.', ''))
+
+total_bayar = ekstrak_harga(harga_tiket1) + ekstrak_harga(harga_tiket2) + ekstrak_harga(harga_tiket3)
+print(f"Total harga tiket yang harus dibayar = {total_bayar:.3f}")

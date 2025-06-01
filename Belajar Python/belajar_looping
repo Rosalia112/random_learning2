@@ -1,0 +1,32 @@
+#Looping for (basics)
+hsr_char = ['Argenti', 'Blade' , 'Mydei']
+for chars in hsr_char :
+    print(chars)
+
+print(hsr_char)
+
+for i in range(8):
+    print(i)
+
+print("============================")
+
+#Looping while (Basics)
+count = 1
+while count <= 5 :
+    print(count)
+    count += 1
+
+print("============================")
+
+for i in range(9):
+    if i == 5:
+        break
+    print(i)
+
+print("============================")
+
+for i in range(10) :
+    if i==3 :
+        print(i)
+        continue
+    print(i)
